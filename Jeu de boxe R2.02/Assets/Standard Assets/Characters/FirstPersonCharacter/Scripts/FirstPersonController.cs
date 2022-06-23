@@ -71,6 +71,42 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 animator.SetBool("isWalking", false);
             }
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                animator.SetBool("isStrafeLeft", true);
+            }
+            if (Input.GetKeyUp(KeyCode.A))
+            {
+                animator.SetBool("isStrafeLeft", false);
+            }
+
+            if (Input.GetKeyDown(KeyCode.S))
+            {
+                animator.SetBool("isWalkingBack", true);
+            }
+            if (Input.GetKeyUp(KeyCode.S))
+            {
+                animator.SetBool("isWalkingBack", false);
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                animator.SetBool("isStrafeRight", true);
+            }
+            if (Input.GetKeyUp(KeyCode.D))
+            {
+                animator.SetBool("isStrafeRight", false);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                animator.SetBool("isJumping", true);
+            }
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                animator.SetBool("isJumping", false);
+            }
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
