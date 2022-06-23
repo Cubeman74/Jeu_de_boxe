@@ -1,52 +1,12 @@
 fileFormatVersion: 2
-guid: fcf9f907adad3a64497782dcddb986a3
+guid: 0ccad74420a4b86408faf566fa95d75c
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: mixamo.com
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Girl01_Body_MAT1
-    second: {fileID: 2100000, guid: e93a5d50ee0f0a64baef1c001cfc16f6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Girl01_Brows_MAT1
-    second: {fileID: 2100000, guid: 6ba5161be416fea4fb0520c04ed3a659, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Girl01_Eyes_MAT1
-    second: {fileID: 2100000, guid: 6f22077e722dfcb47bc4018c531ddf60, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Girl01_Mouth_MAT1
-    second: {fileID: 2100000, guid: bd29183ad7ceb484388443b2b4eceee8, type: 2}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Girl01_FacialAnimMap
-    second: {fileID: 2800000, guid: 3fd111d2e0f2d1b40a5f7ed3d5fd7e90, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Girl01_diffuse
-    second: {fileID: 2800000, guid: 30f975d164aee094bb44208c930ee892, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Girl01_normal
-    second: {fileID: 2800000, guid: 01f0d6317e6ea2442a4717728ecb152c, type: 3}
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: Girl01_spec
-    second: {fileID: 2800000, guid: ee481032e93c4714ca2213206bdb991b, type: 3}
+    second: Walking
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -75,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: mixamo.com
+      name: Walking
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 57
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -139,8 +99,7 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips:
-  - 0ccad74420a4b86408faf566fa95d75c
+  referencedClips: []
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -162,7 +121,7 @@ ModelImporter:
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
