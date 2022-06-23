@@ -15,6 +15,6 @@ public class DoorScript : MonoBehaviour
     void Update()
     { 
         if (Input.GetKey(KeyCode.K))
-            door.transform.Rotate(new Vector3(0, degreesPerSecond, 0) * Time.deltaTime);
+            door.transform.Rotate(new Vector3(0, 0, 0));
     }
 }
