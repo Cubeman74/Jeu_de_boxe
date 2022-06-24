@@ -316,6 +316,7 @@ GameObject:
   - component: {fileID: 4000011657032010}
   - component: {fileID: 33000010417458318}
   - component: {fileID: 23000013241038996}
+  - component: {fileID: 6958236953757404325}
   m_Layer: 0
   m_Name: Door_Knob
   m_TagString: Untagged
@@ -384,6 +385,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6958236953757404325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000012657353528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8992b2087764fc64d94ff7a26bfe4b2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 1000010055107056}
 --- !u!1 &1000012957683102
 GameObject:
   m_ObjectHideFlags: 0
