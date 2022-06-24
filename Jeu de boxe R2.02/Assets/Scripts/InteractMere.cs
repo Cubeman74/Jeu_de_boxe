@@ -10,8 +10,22 @@ public class InteractMere : MonoBehaviour, IInteractable
     // Start is called before the first frame update
     public void Interact()
     {
+        PlayerPrefs.SetInt("lockE", 1);
         box.SetActive(true);
-        DialogData dd = new DialogData("SUUUUUUUUUUU/color:#1fcbfc/UUUUUUUUUUUU/close/");
+        DialogData dd = new DialogData("Bonjour Claire..., j'ai besoin de ton aide pour KAWAI NEEE OUEEEE MOUNIIIIIIIIIIIIIIIIIIIIIIIIIIIRRRRRRR", "Mere");
         dialogManager.Show(dd);
+        
+
+    }
+
+    public void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            dialogManager.Click_Window();
+            PlayerPrefs.SetInt("lockE", 0);
+        }
+
+            
     }
 }

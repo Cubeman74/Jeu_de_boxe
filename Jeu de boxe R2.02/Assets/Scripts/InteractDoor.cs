@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InteractDoor : MonoBehaviour, IInteractable
 {
@@ -19,7 +20,23 @@ public class InteractDoor : MonoBehaviour, IInteractable
     // Update is called once per frame
     public void Interact()
     {
+        if (door.name == "PorteSortie")
+            ExitDoor();
+        else
+            NormalDoor();
         
+
+    }
+
+
+
+    public void ExitDoor()
+    {
+        SceneManager.LoadScene("SimpleNaturePack_Demo");
+    }
+
+    public void NormalDoor()
+    {
         if (isOpen == false)
         {
             cnt = 0;
@@ -36,6 +53,5 @@ public class InteractDoor : MonoBehaviour, IInteractable
             door.transform.Rotate(new Vector3(0, 0, -90));
             isOpen = false;
         }
-
     }
 }

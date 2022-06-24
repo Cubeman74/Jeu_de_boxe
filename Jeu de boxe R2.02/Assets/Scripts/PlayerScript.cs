@@ -6,15 +6,16 @@ public class PlayerScript : MonoBehaviour
 {
     public float rayRange = 4;
     public GameObject interactText;
-    public bool lockE;
 
     private void Start()
     {
-        lockE = true;
+        PlayerPrefs.SetInt("lockE", 0);
+        PlayerPrefs.Save();
     }
     void Update()
     {
         CastRay();
+        
     }
 
     void CastRay()
@@ -22,7 +23,7 @@ public class PlayerScript : MonoBehaviour
         RaycastHit hitInfo = new RaycastHit();
         bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, rayRange);
         
-        if (hit && hitInfo.transform.gameObject.tag == "InteractObject" && lockE)
+        if (hit && hitInfo.transform.gameObject.tag == "InteractObject" && PlayerPrefs.GetInt("lockE") == 0)
         {
             interactText.SetActive(true);
             GameObject hitObject = hitInfo.transform.gameObject;
