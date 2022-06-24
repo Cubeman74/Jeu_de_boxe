@@ -6,7 +6,12 @@ public class PlayerScript : MonoBehaviour
 {
     public float rayRange = 4;
     public GameObject interactText;
+    public bool lockE;
 
+    private void Start()
+    {
+        lockE = true;
+    }
     void Update()
     {
         CastRay();
@@ -17,7 +22,7 @@ public class PlayerScript : MonoBehaviour
         RaycastHit hitInfo = new RaycastHit();
         bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, rayRange);
         
-        if (hit && hitInfo.transform.gameObject.tag == "InteractObject")
+        if (hit && hitInfo.transform.gameObject.tag == "InteractObject" && lockE)
         {
             interactText.SetActive(true);
             GameObject hitObject = hitInfo.transform.gameObject;
