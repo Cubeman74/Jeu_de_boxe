@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     public float rayRange = 4;
+    public GameObject interactText;
 
     void Update()
     {
@@ -17,11 +18,16 @@ public class PlayerScript : MonoBehaviour
         bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, rayRange);
         if (hit)
         {
+            interactText.SetActive(true);
             GameObject hitObject = hitInfo.transform.gameObject;
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 hitObject.GetComponent<IInteractable>().Interact();
             }
+        }
+        else
+        {
+            interactText.SetActive(false);
         }
     }
 }
