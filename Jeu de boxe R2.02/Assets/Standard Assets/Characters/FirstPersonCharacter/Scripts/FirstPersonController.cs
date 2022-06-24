@@ -29,6 +29,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_JumpSound;           // the sound played when character leaves the ground.
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
         [SerializeField] private Animator animator;
+        [SerializeField] private GameObject torch;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -43,6 +44,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        private bool isTorch;
+        private bool isRuning;
+        Vector3 Z;
+        int i1;
 
         // Use this for initialization
         private void Start()
@@ -57,20 +62,50 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
+
+            isTorch = false;
+            Z = new Vector3(0, 0, 0.05f);
+            i1 = 0;
         }
 
 
         // Update is called once per frame
         private void Update()
         {
+
             if (Input.GetKeyDown(KeyCode.W))
             {
-                animator.SetBool("isWalking", true);
+                if (Input.GetKeyDown(KeyCode.LeftShift))
+                {
+                    animator.SetBool("isRuning", true);
+                    animator.SetBool("isWalking", false);
+                }
+                else
+                {
+                    animator.SetBool("isWalking", true);
+                    animator.SetBool("isRuning", false);
+                }
+
+                if (Input.GetKeyUp(KeyCode.LeftShift))
+                {
+
+                    animator.SetBool("isRuning", true);
+                }
+
+
             }
-            if(Input.GetKeyUp(KeyCode.W))
+            if (Input.GetKeyUp(KeyCode.W))
             {
                 animator.SetBool("isWalking", false);
+                animator.SetBool("isRuning", false);
             }
+
+            if(m_IsWalking==true && Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                animator.SetBool("isRuning", true);
+                animator.SetBool("isWalking", false);
+            }
+
 
             if (Input.GetKeyDown(KeyCode.A))
             {
@@ -107,6 +142,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 animator.SetBool("isJumping", false);
             }
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                if (isTorch == true)
+                    isTorch = false;
+                else isTorch = true;
+            }
+
+            if (isTorch == true)
+            {
+                animator.SetBool("isTorch", true);
+                torch.active = true;
+            }
+            else
+            {
+                torch.active = false;
+                animator.SetBool("isTorch", false);
+            }
+
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -149,6 +203,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             RaycastHit hitInfo;
             Physics.SphereCast(transform.position, m_CharacterController.radius, Vector3.down, out hitInfo,
                                m_CharacterController.height/2f, Physics.AllLayers, QueryTriggerInteraction.Ignore);
+
             desiredMove = Vector3.ProjectOnPlane(desiredMove, hitInfo.normal).normalized;
 
             m_MoveDir.x = desiredMove.x*speed;
@@ -225,7 +280,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private void UpdateCameraPosition(float speed)
         {
-            Vector3 newCameraPosition;
+            /*Vector3 newCameraPosition;
             if (!m_UseHeadBob)
             {
                 return;
@@ -243,7 +298,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 newCameraPosition = m_Camera.transform.localPosition;
                 newCameraPosition.y = m_OriginalCameraPosition.y - m_JumpBob.Offset();
             }
-            m_Camera.transform.localPosition = newCameraPosition;
+            m_Camera.transform.localPosition = newCameraPosition;*/
         }
 
 
