@@ -16,7 +16,8 @@ public class PlayerScript : MonoBehaviour
     {
         RaycastHit hitInfo = new RaycastHit();
         bool hit = Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hitInfo, rayRange);
-        if (hit)
+        
+        if (hit && hitInfo.transform.gameObject.tag == "InteractObject")
         {
             interactText.SetActive(true);
             GameObject hitObject = hitInfo.transform.gameObject;
