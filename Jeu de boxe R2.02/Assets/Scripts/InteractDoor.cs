@@ -9,6 +9,8 @@ public class InteractDoor : MonoBehaviour, IInteractable
     public GameObject door;
     bool isOpen;
     int cnt;
+    Vector3 posPlayer;
+    
 
 
     // Start is called before the first frame update
@@ -20,15 +22,24 @@ public class InteractDoor : MonoBehaviour, IInteractable
     // Update is called once per frame
     public void Interact()
     {
-        if (door.name == "PorteSortie")
-            ExitDoor();
-        else
-            NormalDoor();
-        
-
+        switch (door.name)
+        {
+            case "PorteSortie":
+                ExitDoor();
+                break;
+            case "PorteMaisonStart":
+                EnterHouseStart();
+                break;
+            default:
+                NormalDoor();
+                break;
+        } 
     }
 
-
+    public void EnterHouseStart()
+    {
+        SceneManager.LoadScene("MaisonDepart");
+    }
 
     public void ExitDoor()
     {
