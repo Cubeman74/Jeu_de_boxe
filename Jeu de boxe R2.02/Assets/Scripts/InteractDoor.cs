@@ -32,7 +32,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
 
     public void ExitDoor()
     {
-        SceneManager.LoadScene("SimpleNaturePack_Demo");
+        SceneManager.LoadScene("ForestScene");
     }
 
     public void NormalDoor()

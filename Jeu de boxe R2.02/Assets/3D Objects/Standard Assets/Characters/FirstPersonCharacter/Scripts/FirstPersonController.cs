@@ -30,6 +30,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         [SerializeField] private AudioClip m_LandSound;           // the sound played when character touches back on ground.
         [SerializeField] private Animator animator;
         [SerializeField] private GameObject torch;
+        [SerializeField] private GameObject statutLamp;
+        [SerializeField] private GameObject jaugeVitesse;
 
         private Camera m_Camera;
         private bool m_Jump;
@@ -154,11 +156,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 animator.SetBool("isTorch", true);
                 torch.active = true;
+                m_WalkSpeed = 2;
+                m_RunSpeed = 4.5f;
+                statutLamp.active = true;
             }
             else
             {
                 torch.active = false;
+                statutLamp.active = false;
                 animator.SetBool("isTorch", false);
+                 m_WalkSpeed = 3;
+                m_RunSpeed = 8.5f;
             }
 
             RotateView();
