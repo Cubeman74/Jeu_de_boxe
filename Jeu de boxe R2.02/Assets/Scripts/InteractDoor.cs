@@ -9,9 +9,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
     public GameObject door;
     bool isOpen;
     int cnt;
-    Vector3 posPlayer;
-    
-
+  
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +28,9 @@ public class InteractDoor : MonoBehaviour, IInteractable
             case "PorteMaisonStart":
                 EnterHouseStart();
                 break;
+            case "PorteMoulin":
+                EnterMill();
+                break;
             default:
                 NormalDoor();
                 break;
@@ -38,11 +39,18 @@ public class InteractDoor : MonoBehaviour, IInteractable
 
     public void EnterHouseStart()
     {
-        SceneManager.LoadScene("MaisonDepart");
+        PlayerPrefs.SetString("posPlayer", "EnterHouseStart");
+        SceneManager.LoadScene("MaisonDepart");       
+    }
+    public void EnterMill()
+    {
+        PlayerPrefs.SetString("posPlayer", "EnterMill");
+        SceneManager.LoadScene("Niveau1");
     }
 
     public void ExitDoor()
     {
+        PlayerPrefs.SetString("posPlayer", "ExitDoor");
         SceneManager.LoadScene("ForestScene");
     }
 
