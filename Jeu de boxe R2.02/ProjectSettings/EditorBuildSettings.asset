@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ForestScene.unity
     guid: 9bf3b6b739f6d4b41926dff4a191f004
   - enabled: 1
-    path: Assets/Scenes/niveau1_saut.unity
+    path: Assets/Scenes/Niveau1.unity
     guid: 8292c30f78245744690a54f0949e2fea
   - enabled: 1
     path: Assets/Scenes/niveau_ferme.unity
