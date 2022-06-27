@@ -24,7 +24,8 @@ public class InteractDoor : MonoBehaviour, IInteractable
         switch (door.name)
         {
             case "PorteSortie":
-                ExitDoor();
+                if(PlayerPrefs.GetInt("lvlTask") > 0)
+                    ExitDoor();
                 break;
             case "PorteMaisonStart":
                 EnterHouseStart();
