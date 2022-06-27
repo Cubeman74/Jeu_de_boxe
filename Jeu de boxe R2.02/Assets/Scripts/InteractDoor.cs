@@ -57,7 +57,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
     public void ExitDoor()
     {
         player.GetComponentInChildren<CharacterController>().enabled = false;
-        player.transform.position = new Vector3(-4, 1.5f, -12);
+        player.transform.position = new Vector3(-14, 1.5f, 3);
         player.GetComponentInChildren<CharacterController>().enabled = true;
         SceneManager.LoadScene("ForestScene");
     }
