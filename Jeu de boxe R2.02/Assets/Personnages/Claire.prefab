@@ -181,7 +181,7 @@ PrefabInstance:
     - target: {fileID: 640942904506136074, guid: 1916d1b15385b4249a9adc1b6145a456,
         type: 3}
       propertyPath: m_Name
-      value: FPSController 1 Variant
+      value: Claire
       objectReference: {fileID: 0}
     - target: {fileID: 640942904506136074, guid: 1916d1b15385b4249a9adc1b6145a456,
         type: 3}
@@ -198,6 +198,11 @@ PrefabInstance:
       propertyPath: torch
       value: 
       objectReference: {fileID: 1520184431037912473}
+    - target: {fileID: 640942904512693226, guid: 1916d1b15385b4249a9adc1b6145a456,
+        type: 3}
+      propertyPath: m_JumpSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1151316638553444189, guid: 1916d1b15385b4249a9adc1b6145a456,
         type: 3}
       propertyPath: m_LocalPosition.x
