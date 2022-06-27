@@ -10,6 +10,8 @@ public class PlayerScript : MonoBehaviour
     private void Start()
     {
         PlayerPrefs.SetInt("lockE", 0);
+        PlayerPrefs.SetInt("ddMere", 0);
+        PlayerPrefs.SetInt("lvlTask", 0);
         PlayerPrefs.Save();
     }
     void Update()

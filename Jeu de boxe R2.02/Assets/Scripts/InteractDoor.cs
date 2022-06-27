@@ -32,6 +32,9 @@ public class InteractDoor : MonoBehaviour, IInteractable
             case "PorteMoulin":
                 EnterMill();
                 break;
+            case "MoulinExit":
+                MillExit();
+                break;
             default:
                 NormalDoor();
                 break;
@@ -58,6 +61,14 @@ public class InteractDoor : MonoBehaviour, IInteractable
     {
         player.GetComponentInChildren<CharacterController>().enabled = false;
         player.transform.position = new Vector3(-14, 1.5f, 3);
+        player.GetComponentInChildren<CharacterController>().enabled = true;
+        SceneManager.LoadScene("ForestScene");
+    }
+
+    public void MillExit()
+    {
+        player.GetComponentInChildren<CharacterController>().enabled = false;
+        player.transform.position = new Vector3(65, 1.6f, 30);
         player.GetComponentInChildren<CharacterController>().enabled = true;
         SceneManager.LoadScene("ForestScene");
     }
