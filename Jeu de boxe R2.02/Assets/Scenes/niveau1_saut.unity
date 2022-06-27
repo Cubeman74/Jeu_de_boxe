@@ -2319,6 +2319,11 @@ PrefabInstance:
       propertyPath: statutLamp
       value: 
       objectReference: {fileID: 1024878920}
+    - target: {fileID: 1300911984034212914, guid: 979920f27ebcfea468a3c7f1e84691b5,
+        type: 3}
+      propertyPath: m_JumpSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1300911984040183282, guid: 979920f27ebcfea468a3c7f1e84691b5,
         type: 3}
       propertyPath: m_LocalPosition.x

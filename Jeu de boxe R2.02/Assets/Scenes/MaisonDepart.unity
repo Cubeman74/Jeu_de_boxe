@@ -318,6 +318,71 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 966940966}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &98370039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 98370041}
+  - component: {fileID: 98370040}
+  m_Layer: 0
+  m_Name: DontDestroyManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &98370040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98370039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03179e715a9a8e44eb131dedf4012274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objs:
+  - {fileID: 181479973}
+  - {fileID: 702881525}
+--- !u!4 &98370041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98370039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.6927004, y: -2.5712118, z: -8.226671}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &181479973 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1300911984040221138, guid: 979920f27ebcfea468a3c7f1e84691b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1642616222}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &181479980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181479973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03179e715a9a8e44eb131dedf4012274, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objs: []
 --- !u!4 &191531359 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4426268864421927129, guid: 446792e0e439b264b8d3cd829df1ba6f,
@@ -1854,7 +1919,7 @@ GameObject:
   - component: {fileID: 702881527}
   - component: {fileID: 702881526}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
