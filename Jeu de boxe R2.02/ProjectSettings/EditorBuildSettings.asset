@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/MENU.unity
     guid: 18a446ca9f9cd0b41b6face3d6d1be82
   - enabled: 1
-    path: Assets/Scenes/MaisonDepart.unity
+    path: Assets/Scenes/MAMAN.unity
     guid: 7603be017d4379645bba53e2912c20e6
   - enabled: 1
-    path: Assets/Scenes/ForestScene.unity
+    path: Assets/Scenes/MAP FORET.unity
     guid: 9bf3b6b739f6d4b41926dff4a191f004
   - enabled: 1
-    path: Assets/Scenes/Niveau1.unity
+    path: Assets/Scenes/JUMP.unity
     guid: 8292c30f78245744690a54f0949e2fea
   m_configObjects: {}
