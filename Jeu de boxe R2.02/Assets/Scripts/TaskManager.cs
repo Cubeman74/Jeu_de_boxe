@@ -19,6 +19,7 @@ public class TaskManager : MonoBehaviour
         {
             case 0:
                 t1.text = " - Parler à maman";
+                t1.color = Color.yellow;
                 t2.text = "";
                 t3.text = "";
                 break;
@@ -41,7 +42,9 @@ public class TaskManager : MonoBehaviour
             PlayerPrefs.SetInt("lvlTask", 2);
             t1.color = Color.yellow;
         }
-            
+
+
+
 
 
         if (PlayerPrefs.GetString("ingredient") != "")
