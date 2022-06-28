@@ -21,7 +21,7 @@ public class InteractMere : MonoBehaviour, IInteractable
             dd = new DialogData("/speed:up/Bonjour Claire..., j'ai besoin de ton aide pour que tu ailles chez grand-mère pour lui ramener son dinner. Mais j'ai oublié de faire les courses magiques...", "Mere");
             tm.TalkMaman();
         }            
-        else
+        else if (PlayerPrefs.GetInt("ddMere") == 1)
             dd = new DialogData("Il faut que tu trouves du /color:#caff69/pain/color:#ffffff/, du /color:#caff69/lait/color:#ffffff/ et de la /color:#caff69/conffiture/color:#ffffff/. Ah oui et fait /color:#a3002e/attention aux loups dehors !", "Mere");
         dialogManager.Show(dd);
         

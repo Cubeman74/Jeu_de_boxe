@@ -508,6 +508,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1308180098}
     m_Modifications:
+    - target: {fileID: 2690635420244025307, guid: 77d2c631240e41d47806873d69810135,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1552054607}
+    - target: {fileID: 2690635420244025307, guid: 77d2c631240e41d47806873d69810135,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Credits
+      objectReference: {fileID: 0}
     - target: {fileID: 2690635420244025308, guid: 77d2c631240e41d47806873d69810135,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -621,7 +631,7 @@ PrefabInstance:
     - target: {fileID: 2690635420973862137, guid: 77d2c631240e41d47806873d69810135,
         type: 3}
       propertyPath: m_Text
-      value: OPTIONS
+      value: CREDITS
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77d2c631240e41d47806873d69810135, type: 3}
@@ -980,6 +990,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982afa323a4e4904480b8b2e1bc20d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interfaceGO: {fileID: 0}
+  player: {fileID: 0}
 --- !u!224 &1816088879 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2690635420244025308, guid: 77d2c631240e41d47806873d69810135,

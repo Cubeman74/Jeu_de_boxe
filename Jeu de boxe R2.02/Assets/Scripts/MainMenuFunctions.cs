@@ -55,8 +55,7 @@ public class MainMenuFunctions : MonoBehaviour
         m_Paused = false;
         Cursor.visible = false;
         PlayerPrefs.SetInt("lockE", 0);
-        PlayerPrefs.SetInt("ddMere", 0);
-        PlayerPrefs.SetInt("lvlTask", 0);
+        PlayerPrefs.SetInt("lvlTask", 1);
         PlayerPrefs.SetString("ingredient", "");
     }
 }

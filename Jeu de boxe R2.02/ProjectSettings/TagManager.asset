@@ -6,6 +6,8 @@ TagManager:
   tags:
   - InteractObject
   - Fire
+  - Loup
+  - UI
   layers:
   - Default
   - TransparentFX

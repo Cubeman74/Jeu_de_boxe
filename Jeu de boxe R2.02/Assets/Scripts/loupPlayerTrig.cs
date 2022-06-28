@@ -9,6 +9,7 @@ public class loupPlayerTrig : MonoBehaviour
     private float m_TimeScaleRef = 1f;
     private float m_VolumeRef = 1f;
     private bool m_Paused;
+    public AudioClip otherClip;
     [SerializeField] public GameObject pauseMenu;
     [SerializeField] public GameObject perso;
     // Start is called before the first frame update
@@ -34,16 +35,29 @@ public class loupPlayerTrig : MonoBehaviour
     {
         if (col.gameObject.tag == "Loup")
         {
+            StartCoroutine(PlayDead());
             Debug.Log("GAME OVER");
             panelGO.active = true;
             perso.GetComponentInChildren<FirstPersonController>().enabled = false;
             m_TimeScaleRef = Time.timeScale;
             Time.timeScale = 0f;
             m_VolumeRef = AudioListener.volume;
-            AudioListener.volume = 0f;
             m_Paused = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
+    }
+
+
+    
+
+    IEnumerator PlayDead()
+    {
+        AudioSource audio = GetComponent<AudioSource>();
+
+        Debug.Log("wesh");
+        audio.clip = otherClip;
+        audio.Play();
+        yield return new WaitForSeconds(audio.clip.length);
     }
 }

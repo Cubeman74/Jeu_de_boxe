@@ -270,7 +270,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '- LAURENT Louis (voix du loup)
 
-'
+    - mixmit.co (SFX libre de droit)'
 --- !u!222 &139003885
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -428,7 +428,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: anis trading
+  m_Text: '- BELLAHCENE Yanis
+
+    - MADMAR Mounir'
 --- !u!222 &510857216
 CanvasRenderer:
   m_ObjectHideFlags: 0
