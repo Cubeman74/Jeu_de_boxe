@@ -25,7 +25,7 @@ public class TaskManager : MonoBehaviour
             case 1:
                 t1.text = " - Récupérer pain";
                 t2.text = " - Récupérer lait";
-                t3.text = " - Récupérer beurre";
+                t3.text = " - Récupérer conffiture";
                 break;
             case 2:
                 t1.text = " - Aller chez Grand-Mère";
@@ -37,7 +37,11 @@ public class TaskManager : MonoBehaviour
         }
 
         if (ingredientCount == 3)
+        {
             PlayerPrefs.SetInt("lvlTask", 2);
+            t1.color = Color.yellow;
+        }
+            
 
 
         if (PlayerPrefs.GetString("ingredient") != "")
@@ -49,6 +53,9 @@ public class TaskManager : MonoBehaviour
                     break;
                 case "Lait":
                     Lait();
+                    break;
+                case "Conffiture":
+                    Conffiture();
                     break;
                 default:
                     break;
@@ -80,7 +87,7 @@ public class TaskManager : MonoBehaviour
         t2.color = Color.green;
         ingredientCount++;
     }
-    public void Oeuf()
+    public void Conffiture()
     {
         t3.color = Color.green;
         ingredientCount++;

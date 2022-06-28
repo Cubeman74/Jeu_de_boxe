@@ -21,6 +21,10 @@ public class IngredientScript : MonoBehaviour, IInteractable
                 Destroy(ingredient);
                 PlayerPrefs.SetString("ingredient", gameObject.name);
                 break;
+            case "Conffiture":
+                Destroy(ingredient);
+                PlayerPrefs.SetString("ingredient", gameObject.name);
+                break;         
             default:
                 break;
         }
