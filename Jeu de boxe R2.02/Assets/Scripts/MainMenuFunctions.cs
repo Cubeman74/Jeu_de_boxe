@@ -26,6 +26,11 @@ public class MainMenuFunctions : MonoBehaviour
     }
 
 
+    public void Credits() 
+    {
+        SceneManager.LoadScene("Credits");
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene("MaisonDepart");
