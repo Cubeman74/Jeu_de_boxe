@@ -25,7 +25,7 @@ public class TaskManager : MonoBehaviour
             case 1:
                 t1.text = " - Récupérer pain";
                 t2.text = " - Récupérer lait";
-                t3.text = " - Récupérer oeufs";
+                t3.text = " - Récupérer beurre";
                 break;
             case 2:
                 t1.text = " - Aller chez Grand-Mère";
@@ -46,6 +46,9 @@ public class TaskManager : MonoBehaviour
             {
                 case "Pain":
                     Pain();
+                    break;
+                case "Lait":
+                    Lait();
                     break;
                 default:
                     break;

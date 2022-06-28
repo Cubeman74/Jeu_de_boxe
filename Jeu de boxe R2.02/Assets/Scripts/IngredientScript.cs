@@ -17,6 +17,10 @@ public class IngredientScript : MonoBehaviour, IInteractable
                 Destroy(ingredient);
                 PlayerPrefs.SetString("ingredient", gameObject.name);
                 break;
+            case "Lait":
+                Destroy(ingredient);
+                PlayerPrefs.SetString("ingredient", gameObject.name);
+                break;
             default:
                 break;
         }

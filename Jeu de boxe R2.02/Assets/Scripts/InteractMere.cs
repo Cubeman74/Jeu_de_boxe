@@ -22,7 +22,7 @@ public class InteractMere : MonoBehaviour, IInteractable
             tm.TalkMaman();
         }            
         else
-            dd = new DialogData("Il faut que tu trouves du /color:#caff69/pain/color:#ffffff/, du /color:#caff69/lait/color:#ffffff/ et des /color:#caff69/oeufs/color:#ffffff/. Ah oui et fait /color:#a3002e/attention aux loups dehors !", "Mere");
+            dd = new DialogData("Il faut que tu trouves du /color:#caff69/pain/color:#ffffff/, du /color:#caff69/lait/color:#ffffff/ et du /color:#caff69/beurre/color:#ffffff/. Ah oui et fait /color:#a3002e/attention aux loups dehors !", "Mere");
         dialogManager.Show(dd);
         
 
@@ -35,7 +35,7 @@ public class InteractMere : MonoBehaviour, IInteractable
             tm.lvlUp();
             PlayerPrefs.SetInt("ddMere", 1);
             dialogManager.Click_Window();           
-            dd = new DialogData("Il faut que tu trouves du /color:#caff69/pain/color:#ffffff/, du /color:#caff69/lait/color:#ffffff/ et des /color:#caff69/oeufs/color:#ffffff/. Ah oui et fait /color:#a3002e/attention aux loups dehors !", "Mere");
+            dd = new DialogData("Il faut que tu trouves du /color:#caff69/pain/color:#ffffff/, du /color:#caff69/lait/color:#ffffff/ et du /color:#caff69/beurre/color:#ffffff/. Ah oui et fait /color:#a3002e/attention aux loups dehors !", "Mere");
             dialogManager.Show(dd);
             
         }
