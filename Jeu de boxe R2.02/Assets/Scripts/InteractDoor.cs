@@ -71,7 +71,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
     public void MillExit()
     {
         player.GetComponentInChildren<CharacterController>().enabled = false;
-        player.transform.position = new Vector3(65, 1.6f, 30);
+        player.transform.position = new Vector3(62, 1.5f, 35);
         player.GetComponentInChildren<CharacterController>().enabled = true;
         SceneManager.LoadScene("ForestScene");
     }
@@ -81,9 +81,9 @@ public class InteractDoor : MonoBehaviour, IInteractable
         if(PlayerPrefs.GetInt("lvlTask") == 2)
         {
             player.GetComponentInChildren<CharacterController>().enabled = false;
-            player.transform.position = new Vector3(65, 1.6f, 30);
+            player.transform.position = new Vector3(6, 1, 0.5f);
             player.GetComponentInChildren<CharacterController>().enabled = true;
-            SceneManager.LoadScene("");
+            SceneManager.LoadScene("FinalHouse");
         }
         
     }
