@@ -28,6 +28,8 @@ public class PauseMenu : MonoBehaviour
         AudioListener.volume = 0f;
         m_Paused = true;
         pauseMenu.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
 
@@ -38,6 +40,7 @@ public class PauseMenu : MonoBehaviour
         AudioListener.volume = m_VolumeRef;
         m_Paused = false;
         pauseMenu.SetActive(false);
+        
     }
 
     public void QuitButton()
@@ -53,6 +56,7 @@ public class PauseMenu : MonoBehaviour
             MenuOn();
         else if (Input.GetKeyDown(KeyCode.Escape) && m_Paused)
             MenuOff();
+        
     }
 
 }
