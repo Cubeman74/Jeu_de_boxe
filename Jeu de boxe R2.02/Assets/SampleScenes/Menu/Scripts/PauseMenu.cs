@@ -1,63 +1,58 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class PauseMenu : MonoBehaviour
 {
-    private Toggle m_MenuToggle;
 	private float m_TimeScaleRef = 1f;
     private float m_VolumeRef = 1f;
     private bool m_Paused;
+    public GameObject pauseMenu;
+    public GameObject perso;
 
 
     void Awake()
     {
-        m_MenuToggle = GetComponent <Toggle> ();
-	}
+        pauseMenu.SetActive(false);
+        m_Paused = false;
+    }
 
 
     private void MenuOn ()
     {
+        perso.GetComponentInChildren<FirstPersonController>().enabled = false;
         m_TimeScaleRef = Time.timeScale;
         Time.timeScale = 0f;
-
         m_VolumeRef = AudioListener.volume;
         AudioListener.volume = 0f;
-
         m_Paused = true;
+        pauseMenu.SetActive(true);
     }
 
 
     public void MenuOff ()
     {
+        perso.GetComponentInChildren<FirstPersonController>().enabled = true;
         Time.timeScale = m_TimeScaleRef;
         AudioListener.volume = m_VolumeRef;
         m_Paused = false;
+        pauseMenu.SetActive(false);
     }
 
-
-    public void OnMenuStatusChange ()
+    public void QuitButton()
     {
-        if (m_MenuToggle.isOn && !m_Paused)
-        {
-            MenuOn();
-        }
-        else if (!m_MenuToggle.isOn && m_Paused)
-        {
-            MenuOff();
-        }
+        Application.Quit();
     }
 
 
-#if !MOBILE_INPUT
+
 	void Update()
 	{
-		if(Input.GetKeyUp(KeyCode.Escape))
-		{
-		    m_MenuToggle.isOn = !m_MenuToggle.isOn;
-            Cursor.visible = m_MenuToggle.isOn;//force the cursor visible if anythign had hidden it
-		}
-	}
-#endif
+        if (Input.GetKeyDown(KeyCode.Escape) && !m_Paused)
+            MenuOn();
+        else if (Input.GetKeyDown(KeyCode.Escape) && m_Paused)
+            MenuOff();
+    }
 
 }
