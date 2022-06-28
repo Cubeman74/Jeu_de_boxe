@@ -83,7 +83,7 @@ public class InteractDoor : MonoBehaviour, IInteractable
             player.GetComponentInChildren<CharacterController>().enabled = false;
             player.transform.position = new Vector3(6, 1, 0.5f);
             player.GetComponentInChildren<CharacterController>().enabled = true;
-            SceneManager.LoadScene("FinalHouse");
+            SceneManager.LoadScene("FinalMaison");
         }
         
     }
