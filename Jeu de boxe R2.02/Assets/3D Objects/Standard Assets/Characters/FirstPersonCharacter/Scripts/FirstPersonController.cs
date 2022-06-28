@@ -51,6 +51,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         Vector3 Z;
         int i1;
 
+
         // Use this for initialization
         private void Start()
         {
@@ -75,7 +76,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
 
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if (Input.GetKeyDown(KeyCode.LeftShift))
                 {
@@ -96,7 +97,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
             }
-            if (Input.GetKeyUp(KeyCode.W))
+            if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))
             {
                 animator.SetBool("isWalking", false);
                 animator.SetBool("isRuning", false);
@@ -109,29 +110,29 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
 
 
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 animator.SetBool("isStrafeLeft", true);
             }
-            if (Input.GetKeyUp(KeyCode.A))
+            if (Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
             {
                 animator.SetBool("isStrafeLeft", false);
             }
 
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 animator.SetBool("isWalkingBack", true);
             }
-            if (Input.GetKeyUp(KeyCode.S))
+            if (Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow))
             {
                 animator.SetBool("isWalkingBack", false);
             }
 
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 animator.SetBool("isStrafeRight", true);
             }
-            if (Input.GetKeyUp(KeyCode.D))
+            if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow))
             {
                 animator.SetBool("isStrafeRight", false);
             }
