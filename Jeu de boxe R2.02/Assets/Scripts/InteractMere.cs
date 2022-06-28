@@ -18,7 +18,7 @@ public class InteractMere : MonoBehaviour, IInteractable
         box.SetActive(true);
         if(PlayerPrefs.GetInt("ddMere") == 0)
         {
-            dd = new DialogData("Bonjour Claire..., j'ai besoin de ton aide pour que tu ailles chez grand-mère pour lui ramener son dinner. Mais j'ai oublié de faire les courses magiques...", "Mere");
+            dd = new DialogData("/speed:up/Bonjour Claire..., j'ai besoin de ton aide pour que tu ailles chez grand-mère pour lui ramener son dinner. Mais j'ai oublié de faire les courses magiques...", "Mere");
             tm.TalkMaman();
         }            
         else
