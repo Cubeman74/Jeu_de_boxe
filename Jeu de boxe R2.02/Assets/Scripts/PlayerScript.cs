@@ -18,7 +18,9 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         CastRay();
-        
+
+        if (Input.GetKeyDown(KeyCode.P))
+            PlayerPrefs.SetInt("lvlTask", 2);
     }
 
     void CastRay()
